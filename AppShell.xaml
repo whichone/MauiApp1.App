@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:MauiApp1.Views"
+    xmlns:local="clr-namespace:MauiApp1">
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"/>
+
+    <TabBar Title="Annotation" Route="Annotation">
+
+    <Tab Title="Shape">
+        <ShellContent Title="ShapePage"
+                        Route="ShapePage"
+                        ContentTemplate="{DataTemplate view:ShapePage}"/>
+    </Tab>
+    <Tab Title="Callout">
+        <ShellContent Title="CalloutPage"
+                        Route="CalloutPage"
+                        ContentTemplate="{DataTemplate view:CalloutPage}"/>
+    </Tab>
+    <Tab Title="Sign">
+        <ShellContent Title="SignPage"
+                        Route="SignPage"
+                        ContentTemplate="{DataTemplate view:SignPage}"/>
+    </Tab>
+    </TabBar>
+
+</Shell>
